@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m 'Commit automated by gitpush'
+git push
