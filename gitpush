@@ -1,4 +1,6 @@
 #!/bin/bash
 git add .
-git commit -m 'Commit automated by gitpush'
+echo "Enter commit message"
+read commitmessage
+git commit -m '\$commitmessage'
 git push
