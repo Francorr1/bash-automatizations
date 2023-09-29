@@ -4,3 +4,4 @@ echo "Enter commit message"
 read commitmessage
 git commit -m "$commitmessage"
 git push
+printf 'Execution [\033[32mOK\033[39m]\n'

@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Enter repo link (excluding 'https://'):"
+read repo
+git clone https://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@$repo
+printf 'Execution [\033[32mOK\033[39m]\n'
