@@ -1,11 +1,13 @@
 #!/bin/bash
-token_file = /token_file
-if test -f "$token_file"; then
-    token = cat $token_file
-else
+token_file="~/token_file"
+if [ -f "~/token_file" ]; then
+    token=cat $token_file
+    echo "$token"
+fi
+if ! [ -f "~/token_file" ]; then
     echo "Token file missing, enter your github token:"
     read token
-    echo "$token" >> $token_file
+    echo $token > ~/token_file
 fi
 echo "Enter repo link (excluding 'https://'):"
 read repo
