@@ -1,5 +1,13 @@
 #!/bin/bash
+token_file = /token_file
+if test -f "$token_file"; then
+    token = cat $token_file
+else
+    echo "Token file missing, enter your github token:"
+    read token
+    echo "$token" >> $token_file
+fi
 echo "Enter repo link (excluding 'https://'):"
 read repo
-git clone https://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@$repo
+git clone https://$token@$repo
 printf 'Execution [\033[32mOK\033[39m]\n'
